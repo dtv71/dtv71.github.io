@@ -1,5 +1,7 @@
 # dtv71.github.io
 
 My personal CV
-##👍Live preview
+
+## 👍Live preview
+
 [dtv71.github.io](https://dtv71.github.io)
