@@ -1,4 +1,4 @@
-var activePage = "home";
+var activePage = "skills";
 
 function hide(id) {
   $("#" + id).style.display = "none";
@@ -19,8 +19,6 @@ function displayPage(id) {
   $(`#top-menu-bar a[data-page="${id}"]`).classList.add("active");
 }
 
-displayPage(activePage);
-
 function clickOnMenu(e) {
   if (e.target.matches("a")) {
     var id = e.target.dataset.page;
@@ -33,6 +31,17 @@ function clickOnMenu(e) {
   }
 }
 
-$("#top-menu-bar").addEventListener("click", clickOnMenu);
+function showSkillList() {
+  var ul = $("#skills ul");
+  var skills = ["HTML", "CSS", "JS"];
+  var skillsHtml = skills.map(function (skill) {
+    //<li class="favorite">HTML</li>
+    return "<li>" + skill + "</li>";
+  });
+  console.log(skillsHtml);
+  ul.innerHTML = skillsHtml.join("");
+}
 
-//displayPage('skills')
+displayPage(activePage);
+$("#top-menu-bar").addEventListener("click", clickOnMenu);
+showSkillList();
