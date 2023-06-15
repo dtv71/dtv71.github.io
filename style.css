@@ -119,3 +119,8 @@ label {
   color: #334455;
   background: cyan;
 }
+#skills li span {
+  color: #333;
+  font-weight: normal;
+  font-size: 12px;
+}

@@ -31,22 +31,25 @@ function clickOnMenu(e) {
   }
 }
 
-function showSkillList() {
-  var skills = [
-    { name: "HTML", favorite: true },
-    { name: "CSS" },
-    { name: "JS", favorite: true },
-  ];
-
+function showSkillList(skills) {
   var ul = $("#skills ul");
 
   var skillsHtml = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "";
-    return `<li class="${className}">${skill.name}</li>`;
+    return `<li class="${className}">${skill.name} · <span>${skill.endorsements}</span></li>`;
   });
   ul.innerHTML = skillsHtml.join("");
 }
 
+function getSkillsRequest() {
+  console.warn("TODO");
+  fetch("skills.json").then(function (r) {
+    r.json().then(function (skills) {
+      showSkillList(skills);
+    });
+  });
+}
+
 displayPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-showSkillList();
+getSkillsRequest();
