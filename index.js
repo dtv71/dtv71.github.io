@@ -1,6 +1,9 @@
 function hide(id) {
   document.getElementById(id).style.display = "none";
 }
+function show(id) {
+  document.getElementById(id).style.display = "block";
+}
 function hideAllPages() {
   hide("home");
   hide("skills");
@@ -11,8 +14,7 @@ function hideAllPages() {
 
 function displayPage(id) {
   hideAllPages();
-  var page = document.getElementById(id);
-  page.style.display = "block";
+  show(id);
 }
 
 displayPage("home");
