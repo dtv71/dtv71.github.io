@@ -20,10 +20,10 @@
         </div>
       </div>
       <ul id="top-menu-bar">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Languages</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#" onclick="displayHome()">HOME</a></li>
+        <li><a href="#" onclick="displaySkills()">Skills</a></li>
+        <li><a href="#" onclick="displayLanguages()">Languages</a></li>
+        <li><a href="#" onclick="displayProjects()">Projects</a></li>
       </ul>
     </header>
 
@@ -52,10 +52,10 @@
         <section>Menu2</section>
       </div>
       <div id="main">
-        <div class="page">
+        <div id="home" class="page">
           <h2>Home</h2>
         </div>
-        <div class="page">
+        <div id="skills" class="page">
           <div>
             <h2>Skills</h2>
             <ul>
@@ -65,7 +65,7 @@
             </ul>
           </div>
         </div>
-        <div class="page">
+        <div id="languages" class="page">
           <h2>Known languages</h2>
           <table>
             <tr>
@@ -86,7 +86,7 @@
             </tr>
           </table>
         </div>
-        <div class="page">
+        <div id="projects" class="page">
           <h2>Projects</h2>
         </div>
       </div>
@@ -98,3 +98,5 @@
     <script src="examples.js"></script>
   </body>
 </html>
+
+<script src="index.js"></script>
