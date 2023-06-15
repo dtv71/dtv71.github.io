@@ -20,3 +20,19 @@ function displayPage(id) {
 }
 
 displayPage(activePage);
+
+function clickOnMenu(e) {
+  if (e.target.matches("a")) {
+    var id = e.target.dataset.page;
+    console.info("clickOnMenu", e.target);
+    if (id) {
+      displayPage(id);
+    } else {
+      console.warn("eroare, nu este data-page bun");
+    }
+  }
+}
+
+$("#top-menu-bar").addEventListener("click", clickOnMenu);
+
+//displayPage('skills')
