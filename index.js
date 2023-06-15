@@ -8,10 +8,16 @@ function show(id) {
 }
 
 function displayPage(id) {
-  //hideAllPages();
   hide(activePage);
-  show(id);
+  document
+    .querySelector(`#top-menu-bar a[data-page="${activePage}"]`)
+    .classList.remove("active");
   activePage = id;
+
+  show(id);
+  document
+    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
+    .classList.add("active");
 }
 
 displayPage(activePage);
