@@ -36,7 +36,6 @@ header h2 {
   align-items: center;
 }
 #my-picture {
-  flex: 1;
   padding: 5px;
   width: 108px;
   height: 108px;
@@ -50,7 +49,6 @@ header h2 {
   background-size: cover;
 }
 #header-info {
-  flex: 4;
   padding: 10px 10px 10px 10px;
 }
 #side-menu {
