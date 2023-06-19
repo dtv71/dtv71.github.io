@@ -1,4 +1,4 @@
-let activePage = "skills";
+let activePage = "home";
 
 function hide(id) {
   $("#" + id).style.display = "none";
@@ -53,17 +53,25 @@ function getSkillsRequest() {
 }
 
 function showProjectsList(prj) {
-  const ulPrj = $("#projects ul");
+  const divPrj = $("#projects-all");
   //console.log(skills);
 
   //return a.name.localeCompare(b.name);
   //skills.sort((a, b) => a.endorsements - b.endorsements);
 
-  var projectsHtml = prj.map((prj) => {
-    const listaPrj = `<li><a href="${prj.url}">${prj.numeProiect}</a></li>`;
+  var projectsHtml = prj.map((prj, i) => {
+    const listaPrj = `<div style="border-bottom: 1px solid #ccc;">
+    <h3>${i + 1})&nbsp;<a href="${prj.url}" target="${prj.target}">${
+      prj.numeProiect
+    }</a></h3>
+    <p>${prj.descriere}</p>
+    <a href="${prj.url}" target="${prj.target}"><img src="${
+      prj.imgUrl
+    }" height="100"></a>
+    </div>`;
     return listaPrj;
   });
-  ulPrj.innerHTML = projectsHtml.join("");
+  divPrj.innerHTML = projectsHtml.join("");
 }
 
 function getProjectsRequest() {

@@ -64,7 +64,8 @@ header h2 {
 #main {
   flex: 4;
   padding: 10px 10px 5px 5px;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
@@ -74,6 +75,7 @@ header h2 {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   margin-bottom: 10px;
+  flex: 1;
 }
 /*endflex*/
 
@@ -141,6 +143,9 @@ footer a {
   transition: 0.5s;
   text-decoration: none;
 }
+footer a:hover {
+  background: brown;
+}
 
 footer .item {
   display: flex;
@@ -148,4 +153,20 @@ footer .item {
   align-items: center;
   justify-content: center;
   gap: 3px;
+}
+
+#languages table {
+  width: 50%;
+  min-width: 330px;
+  border-collapse: collapse;
+}
+
+#languages table th,
+#languages table td {
+  border: 1px solid #0798ab;
+  padding: 5px;
+}
+
+th {
+  background: #d1e7ea;
 }
