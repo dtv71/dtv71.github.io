@@ -170,3 +170,16 @@ footer .item {
 th {
   background: #d1e7ea;
 }
+
+#container-projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+}

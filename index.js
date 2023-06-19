@@ -53,21 +53,21 @@ function getSkillsRequest() {
 }
 
 function showProjectsList(prj) {
-  const divPrj = $("#projects-all");
+  const divPrj = $("#container-projects");
   //console.log(skills);
 
   //return a.name.localeCompare(b.name);
   //skills.sort((a, b) => a.endorsements - b.endorsements);
 
   var projectsHtml = prj.map((prj, i) => {
-    const listaPrj = `<div style="border-bottom: 1px solid #ccc;">
+    const listaPrj = `<div class="project-card">
     <h3>${i + 1})&nbsp;<a href="${prj.url}" target="${prj.target}">${
       prj.numeProiect
     }</a></h3>
     <p>${prj.descriere}</p>
     <a href="${prj.url}" target="${prj.target}"><img src="${
       prj.imgUrl
-    }" height="100"></a>
+    }" height="150"></a>
     </div>`;
     return listaPrj;
   });
