@@ -33,7 +33,7 @@ function clickOnMenu(e) {
 
 function showSkillList(skills) {
   var ul = $("#skills ul");
-
+  //console.log(skills);
   var skillsHtml = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} · <span>${skill.endorsements}</span></li>`;
@@ -42,11 +42,9 @@ function showSkillList(skills) {
 }
 
 function getSkillsRequest() {
-  console.warn("TODO");
+  //console.warn("TODO");
   fetch("skills.json").then(function (r) {
-    r.json().then(function (skills) {
-      showSkillList(skills);
-    });
+    r.json().then(showSkillList);
   });
 }
 
