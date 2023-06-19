@@ -19,3 +19,18 @@ console.warn(typeof person, person);
 // object DOM
 var el = document.getElementById("job-title");
 console.log(el.innerHTML);
+
+function h() {
+  return "h";
+}
+
+const f = function () {
+  return "f";
+};
+
+const a = () => {
+  return "a";
+};
+console.log(h());
+console.log(f()); // Cannot access 'f' before initialization
+console.log(a());
