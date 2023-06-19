@@ -35,6 +35,10 @@ function clickOnMenu(e) {
 function showSkillList(skills) {
   const ul = $("#skills ul");
   //console.log(skills);
+
+  //return a.name.localeCompare(b.name);
+  skills.sort((a, b) => a.endorsements - b.endorsements);
+
   var skillsHtml = skills.map((skill) => {
     var className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} · <span>${skill.endorsements}</span></li>`;
@@ -43,10 +47,9 @@ function showSkillList(skills) {
 }
 
 function getSkillsRequest() {
-  //console.warn("TODO");
-  fetch("skills.json").then((r) => {
-    r.json().then(showSkillList);
-  });
+  fetch("skills.json")
+    .then((r) => r.json())
+    .then(showSkillList);
 }
 
 displayPage(activePage);
