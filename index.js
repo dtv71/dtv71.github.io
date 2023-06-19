@@ -52,6 +52,26 @@ function getSkillsRequest() {
     .then(showSkillList);
 }
 
+function showProjectsList(prj) {
+  const ulPrj = $("#projects ul");
+  //console.log(skills);
+
+  //return a.name.localeCompare(b.name);
+  //skills.sort((a, b) => a.endorsements - b.endorsements);
+
+  var projectsHtml = prj.map((prj) => {
+    const listaPrj = `<li><a href="${prj.url}">${prj.numeProiect}</a></li>`;
+    return listaPrj;
+  });
+  ulPrj.innerHTML = projectsHtml.join("");
+}
+
+function getProjectsRequest() {
+  fetch("projects.json")
+    .then((r) => r.json())
+    .then(showProjectsList);
+}
 displayPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
 getSkillsRequest();
+getProjectsRequest();
