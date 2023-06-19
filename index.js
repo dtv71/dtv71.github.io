@@ -1,10 +1,11 @@
-var activePage = "skills";
+let activePage = "skills";
 
 function hide(id) {
   $("#" + id).style.display = "none";
 }
 function show(id) {
-  $(`#${id}`).style.display = "block";
+  const page = $(`#${id}`);
+  page.style.display = "block";
 }
 function $(selector) {
   return document.querySelector(selector);
@@ -21,7 +22,7 @@ function displayPage(id) {
 
 function clickOnMenu(e) {
   if (e.target.matches("a")) {
-    var id = e.target.dataset.page;
+    const id = e.target.dataset.page;
     console.info("clickOnMenu", e.target);
     if (id) {
       displayPage(id);
@@ -32,7 +33,7 @@ function clickOnMenu(e) {
 }
 
 function showSkillList(skills) {
-  var ul = $("#skills ul");
+  const ul = $("#skills ul");
   //console.log(skills);
   var skillsHtml = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "";
