@@ -19,17 +19,19 @@ function displayPage(id) {
   show(id);
   $(`#top-menu-bar a[data-page="${id}"]`).classList.add("active");
 }
-
-function clickOnMenu(e) {
-  if (e.target.matches("a")) {
-    const id = e.target.dataset.page;
-    console.info("clickOnMenu", e.target);
-    if (id) {
-      displayPage(id);
-    } else {
-      console.warn("eroare, nu este data-page bun");
+function initEvents() {
+  function clickOnMenu(e) {
+    if (e.target.matches("a")) {
+      const id = e.target.dataset.page;
+      console.info("clickOnMenu", e.target);
+      if (id) {
+        displayPage(id);
+      } else {
+        console.warn("eroare, nu este data-page bun");
+      }
     }
   }
+  $("#top-menu-bar").addEventListener("click", clickOnMenu);
 }
 
 function showSkillList(skills) {
@@ -67,6 +69,8 @@ function showProjectsList(prj) {
     <p>${prj.descriere}</p>
     <a href="${prj.url}" target="${prj.target}"><img src="${
       prj.imgUrl
+        ? prj.imgUrl
+        : "https://www.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
     }" height="150"></a>
     </div>`;
     return listaPrj;
@@ -80,6 +84,6 @@ function getProjectsRequest() {
     .then(showProjectsList);
 }
 displayPage(activePage);
-$("#top-menu-bar").addEventListener("click", clickOnMenu);
+initEvents();
 getSkillsRequest();
 getProjectsRequest();

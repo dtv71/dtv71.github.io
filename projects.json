@@ -16,22 +16,29 @@
   {
     "numeProiect": "Edusontv.net",
     "descriere": "Cursuri de ecografie",
-    "url": "http://edusontv.net",
+    "url": "https://edusontv.net",
     "imgUrl": "https://codecloud.ro/wp-content/uploads/2022/09/edusontv-1024x491.png",
     "target": "_blank"
   },
   {
     "numeProiect": "Margiz.net",
-    "descriere": "Dismantling and relocation of factories and production lines",
-    "url": "http://margiz.net",
+    "descriere": "Dismantling and relocation of production lines",
+    "url": "https://margiz.net",
     "imgUrl": "https://codecloud.ro/wp-content/uploads/2022/09/margiz-1024x491.png",
     "target": "_blank"
   },
   {
     "numeProiect": "Amax.rohbau.de",
     "descriere": "Ihr Bauvorhaben in guten Händen!",
-    "url": "http://amax.codecloud.ro",
+    "url": "https://amax.codecloud.ro",
     "imgUrl": "https://codecloud.ro/wp-content/uploads/2022/09/amax-rohbau-1024x491.png",
+    "target": "_blank"
+  },
+  {
+    "numeProiect": "Cursant@FastTrackIT",
+    "descriere": "Transilvania Digital",
+    "url": "https://dtv71.github.io",
+    "imgUrl": "transilvania-digital.PNG",
     "target": "_blank"
   }
 ]
